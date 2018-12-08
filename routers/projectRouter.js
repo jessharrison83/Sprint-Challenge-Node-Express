@@ -13,18 +13,6 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/actions/:id", (req, res) => {
-  const { id } = req.params;
-  projectDB
-    .getProjectActions(id)
-    .then(actions => {
-      res.json(actions);
-    })
-    .catch(err => {
-      res.status(404).json({ message: "No projects with that ID." });
-    });
-});
-
 router.get("/:id", (req, res) => {
   const { id } = req.params;
   projectDB

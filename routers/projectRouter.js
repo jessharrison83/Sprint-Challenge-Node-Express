@@ -5,8 +5,8 @@ const projectDB = require("../data/helpers/projectModel");
 router.get("/", (req, res) => {
   projectDB
     .get()
-    .then(projects => {
-      res.json(projects);
+    .then(data => {
+      res.json(data);
     })
     .catch(err => {
       res.status(400).json({ message: "projects not found" });

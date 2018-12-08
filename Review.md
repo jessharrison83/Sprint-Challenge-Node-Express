@@ -26,6 +26,8 @@ status codes
 
 ## How can we partition our application into sub-applications?
 
+By using routers to perform CRUD operations on a single resource when multiple resources are being used.
+
 ## What is express.json() and why do we need it?
 
 Built in express middlware that parses incoming requests with JSON payloads.
